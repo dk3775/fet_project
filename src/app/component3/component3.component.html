@@ -1,0 +1,39 @@
+<!-- Add Bootstrap navbar with links to components -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand mx-2" href="#">OCR App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/component1" routerLinkActive="active">Upload File</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/component2" routerLinkActive="active">Process File</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/component3" routerLinkActive="active">File Result</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- component3.component.html -->
+
+<div class="container">
+    <h1>Processed Result</h1>
+    <div class="processed-result" *ngIf="processedFileResult">
+        <h3>Processed Result:</h3>
+        <p>{{ processedFileResult }}</p>
+    </div>
+    <div class="file-not-present" *ngIf="!processedFileResult">
+        <p>Cannot display result as no backend process present!!</p>
+    </div>
+</div>
+
+
+<!-- Add router outlet to display components based on routing -->
+<router-outlet></router-outlet>
+
