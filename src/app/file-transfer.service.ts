@@ -16,5 +16,8 @@ export class FileTransferService {
     this.fileSource.next(file);
   }
 
+  get fileUrl() {
+    return this.fileSource.value ? URL.createObjectURL(this.fileSource.value) : "";
+  }
 
 }

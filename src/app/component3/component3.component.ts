@@ -2,6 +2,8 @@
 
 import { Component, OnInit } from '@angular/core';
 import { FileTransferService } from '../file-transfer.service';
+// import { createWorker } from 'tesseract.js';
+
 
 @Component({
   selector: 'app-component3',
@@ -15,5 +17,6 @@ export class Component3Component implements OnInit {
 
   ngOnInit() {
     
+
   }
 }
